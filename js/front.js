@@ -3,7 +3,7 @@ $(function () {
     lightbox();
     sticky();
     utils();
-    map();
+    // map();
     demo();
 
 });
@@ -37,7 +37,7 @@ function lightbox() {
 }
 
 /* =========================================
- *  sticky header 
+ *  sticky header
  *  =======================================*/
 
 function sticky() {
@@ -48,7 +48,7 @@ function sticky() {
 
 
 /* =========================================
- *  map 
+ *  map
  *  =======================================*/
 
 function map() {
@@ -89,14 +89,14 @@ function utils() {
 
     /* tooltips */
 
-    $('[data-toggle="tooltip"]').tooltip();
+    // $('[data-toggle="tooltip"]').tooltip();
 
     /* click on the box activates the radio */
 
-    $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
-        var radio = $(this).find(':radio');
-        radio.prop('checked', true);
-    });
+    // $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
+    //     var radio = $(this).find(':radio');
+    //     radio.prop('checked', true);
+    // });
     /* click on the box activates the link in it */
 
     $('.box.clickable').on('click', function (e) {
