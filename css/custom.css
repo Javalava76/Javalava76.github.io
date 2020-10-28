@@ -27,6 +27,13 @@ h1 {
 		font-size: 4em !important;
 	}
 }
+@media (max-width: 550px)
+{
+	#intro strong
+	{
+		font-size: 2.5em !important;
+	}
+}
 
 #contact {
 	width: 90%;
