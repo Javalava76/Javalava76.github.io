@@ -3,8 +3,29 @@ h1 {
 	font-family: 'Montserrat';
 }
 
+.overlay
+{
+	height: 50%;
+	top: 4em;
+}
+
+#intro
+{
+	min-height: unset;
+	height: unset;
+}
+
 #intro strong
 {
 	padding: 0 0 0 1em !important;
-	font-size: 18px;
+	font-size: 5em !important;
+}
+
+#contact {
+	width: 90%;
+}
+
+.form-control
+{
+	background-image: none !important;
 }
