@@ -5,8 +5,7 @@ h1 {
 
 .overlay
 {
-	height: 0;
-	top: 4em;
+	opacity: 0;
 }
 
 #intro
