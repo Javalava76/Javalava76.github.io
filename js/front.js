@@ -4,25 +4,9 @@ $(function () {
     sticky();
     utils();
     // map();
-    demo();
 
 });
 
-/* for demo purpose only - can be deleted */
-
-function demo() {
-
-    $("#page").change(function () {
-
-        if ($(this).val() !== '') {
-
-            window.location.href = $(this).val();
-
-        }
-
-        return false;
-    });
-}
 
 /* =========================================
  *  lightbox
