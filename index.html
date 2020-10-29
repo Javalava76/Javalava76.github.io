@@ -36,66 +36,82 @@
       </div>
     </section>
     <!-- intro end-->
-    <!-- contact-->
+    <!-- form-->
     <section id="contact" style="background-color: #fff;" class="text-page">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="heading"></h2>
-            <div class="row">
-              <div class="col-md-6">
-                <form class="contact-form">
-                  <div class="controls">
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="form-group">
-                          <label for="people">Number of Participants:</label>
-                          <select name="people" id="people">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="n">5 or more</option>
-                          </select>
+      <form>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="heading"></h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <form class="contact-form">
+                    <div class="controls">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <!-- <label for="people">Number of Participants:</label> -->
+                            <!-- <select name="people" id="people">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="n">5 or more</option>
+                            </select> -->
+                            <div class="people">Number of Participants: </div>
+                            <br>
+                            <!-- <ul> -->
+                            <input type="checkbox" id="people1" name="people1" value="1" />
+                            <label for="people1"> Solo Adventure</label><br>
+                            <input type="checkbox" id="people2" name="people2" value="2" />
+                            <label for="people2"> Buddy System</label><br>
+                            <input type="checkbox" id="people3" name="people3" value="3" />
+                            <label for="people3"> Three's Company</label><br>
+                            <input type="checkbox" id="people4" name="people4" value="4" />
+                            <label for="people4"> Double Date</label><br>
+                            <input type="checkbox" id="people5" name="people5" value="n" />
+                            <label for="people5"> Brady Bunch</label><br>
+                            <!-- </ul> -->
                         </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="form-group">
-                          <label for="price">Price Range:</label>
-                            <select name="price" id="price">
-                              <option value="0.0">FREE</option>
-                              <option value="0.3">cheap</option>
-                              <option value="0.7">moderate</option>
-                              <option value="1.0">expensive</option>
-                            </select>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="price">Price Range:</label>
+                              <select name="price" id="price">
+                                <option value="0.0">FREE</option>
+                                <option value="0.3">cheap</option>
+                                <option value="0.7">moderate</option>
+                                <option value="1.0">expensive</option>
+                              </select>
+                          </div>
                         </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="activity-type">Activity Type:</label>
+                              <select name="activity-type" id="activity-type">
+                                <option value="educational">educational</option>
+                                <option value="recreational">recreational</option>
+                                <option value="diy">diy</option>
+                                <option value="charity">charity</option>
+                                <option value="cooking">cooking</option>
+                                <option value="relaxation">relaxation</option>
+                                <option value="music">music</option>
+                                <option value="busywork">busywork</option>
+                              </select>
+                         </div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="form-group">
-                          <label for="activity-type">Activity Type:</label>
-                            <select name="activity-type" id="activity-type">
-                              <option value="educational">educational</option>
-                              <option value="recreational">recreational</option>
-                              <option value="diy">diy</option>
-                              <option value="charity">charity</option>
-                              <option value="cooking">cooking</option>
-                              <option value="relaxation">relaxation</option>
-                              <option value="music">music</option>
-                              <option value="busywork">busywork</option>
-                            </select>
-                       </div>
+                        <div class="text-center">
+                          <input id="submit" type="submit" name="name" value="Submit" class="btn btn-primary btn-block">
+                        </div>
                     </div>
-                      <div class="text-center">
-                        <input id="submit" type="submit" name="name" value="Submit" class="btn btn-primary btn-block">
-                      </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </section>
+    <!-- form end -->
     <footer style="background-color: #111;" class="section-inverse">
     </footer>
     <!-- Javascript files-->

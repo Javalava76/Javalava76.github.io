@@ -12,6 +12,7 @@ function queryActivities (){
 
   $( "#submit" ).click(function( event ) {
     event.preventDefault();
+    // $(#)
     try {
       let xhr = new XMLHttpRequest();
       xhr.open('GET', 'https://www.boredapi.com/api/activity?type=recreational');
@@ -36,5 +37,4 @@ function queryActivities (){
       console.log('GET problem',e.message);
     }
   });
-
 }
