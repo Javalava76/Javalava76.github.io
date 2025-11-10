@@ -8,6 +8,7 @@ function queryActivities (){
 
   let data;
   let activity;
+  let catUrl;
   let listNumber = 0;
 
   $( "#submit" ).click(function(event) {
@@ -36,39 +37,34 @@ function queryActivities (){
     }
     else
     {
-      //try {
-        // let xhr = new XMLHttpRequest();
-        // xhr.open('GET', 'https://www.boredapi.com/api/activity?type=recreational&type=cooking');
-        // xhr.onreadystatechange = function () {
-         //   if (xhr.readyState === XMLHttpRequest.DONE) {
-        //    console.log(xhr.responseText);
-    		//		data = JSON.parse(xhr.responseText);
-        //    activity = data.activity;
-            // console.log(activity);
-            fetch('https://api.thecatapi.com/v1/images/search')
-              .then(response => response.json())
-              .then(data => {
-              const imageUrl = data[0].url;
-            console.log(`Here's a random cat image: ${imageUrl}`);
-              });
-        //    listNumber = listNumber + 1;
-        //    $('.section-inverse').append($('<div>', {
-        //       class: "suggestion-class prepend",
-        //        style: "padding: 7px 1px 7px 17px; cursor:pointer;font-weight:300",
-        //        text: listNumber + ". " + activity
-        //      }));
+      try {
+         let xhr = new XMLHttpRequest();
+         xhr.open('GET', 'https://api.thecatapi.com/v1/images/search');
+         xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+           console.log(xhr.responseText);
+    				response = JSON.parse(xhr.responseText);
+            catUrl = response[0].url;
+             console.log(catUrl.src);
+           
+            listNumber = listNumber + 1;
+            $('.section-inverse').append($('<div>', {
+               class: "suggestion-class prepend",
+                style: "padding: 7px 1px 7px 17px; cursor:pointer;font-weight:300; display:block;",
+                text: listNumber + ". " + catUrl.src
+              }));
        
          console.log(`Sorry, the previous version stopped working. This page was updated 11/9/2025.`);
-        //});
+        
 
-      //      return;
-      //    }
-      //  }
-        // xhr.send(null);
-      //}
-     // catch(e) {
-    //    console.log('GET problem',e.message);
-    //  }
+            return;
+         }
+        }
+         xhr.send(null);
+      }
+      catch(e) {
+        console.log('GET problem',e.message);
+     }
     }
   });
 }
