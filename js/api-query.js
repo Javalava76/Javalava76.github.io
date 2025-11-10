@@ -33,7 +33,7 @@ function queryActivities (){
           val3[i] = $(this).val();
         });
         console.log(val3);
-    if ( val1.length == 0 || val2.length == 0 || val3 == 0 ) {
+    if ( val1.length == 0 || val2.length == 0 || val3.length == 0 ) {
       console.log('Error!');
     }
     else
@@ -56,10 +56,10 @@ function queryActivities (){
                 text: listNumber + ". "
               }));
               $('.suggestion-class').append($('<img>', {
-               id:"catImage",
-               src="",
-               alt="Random cat",
-               style="max-width: 400px; display: none;"
+               id: "catImage",
+               src: "",
+               alt: "Random cat",
+               style: "max-width: 400px; display: none;"
               }));
 
               let catImg = document.getElementById('catImage');
