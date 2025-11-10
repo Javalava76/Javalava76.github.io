@@ -47,7 +47,7 @@ function queryActivities (){
             console.log("response:" + response);
             catUrl = response[0].url;
            // catImg = catUrl.src;
-             console.log("catUrl:", catUrl);
+           //  console.log("catUrl:", catUrl);
            
             listNumber = listNumber + 1;
             $('.section-inverse').append($('<div>', {
