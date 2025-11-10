@@ -6,9 +6,10 @@ $(function () {
 
 function queryActivities (){
 
-  let data;
+  let response;
   let activity;
   let catUrl;
+  let catImg;
   let listNumber = 0;
 
   $( "#submit" ).click(function(event) {
@@ -42,16 +43,17 @@ function queryActivities (){
          xhr.open('GET', 'https://api.thecatapi.com/v1/images/search');
          xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE) {
-           console.log(xhr.responseText);
+           console.log("responseText:", xhr.responseText);
     				response = JSON.parse(xhr.responseText);
             catUrl = response[0].url;
-             console.log(catUrl.src);
+            catImg = catUrl.src;
+             console.log(catUrl, catImg);
            
             listNumber = listNumber + 1;
             $('.section-inverse').append($('<div>', {
                class: "suggestion-class prepend",
-                style: "padding: 7px 1px 7px 17px; cursor:pointer;font-weight:300; display:block;",
-                text: listNumber + ". " + catUrl.src
+                style: "padding: 7px 1px 7px 17px; cursor:pointer;font-weight:300;",
+                text: listNumber + ". "
               }));
        
          console.log(`Sorry, the previous version stopped working. This page was updated 11/9/2025.`);
