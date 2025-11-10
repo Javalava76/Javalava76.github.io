@@ -9,7 +9,7 @@ function queryActivities (){
   let response;
   let activity;
   let catUrl;
-  let catImg;
+  // let catImg;
   let listNumber = 0;
 
   $( "#submit" ).click(function(event) {
@@ -47,7 +47,7 @@ function queryActivities (){
             console.log("response:" + response);
             catUrl = response[0].url;
            // catImg = catUrl.src;
-             console.log("catUrl:" catUrl);
+             console.log("catUrl:", catUrl);
            
             listNumber = listNumber + 1;
             $('.section-inverse').append($('<div>', {
@@ -62,7 +62,7 @@ function queryActivities (){
                style="max-width: 400px; display: none;"
               }));
 
-              const catImg = document.getElementById('catImage');
+              let catImg = document.getElementById('catImage');
               catImg.src = catUrl;
               catImg.style.display = 'block';
        
