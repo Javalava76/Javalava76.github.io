@@ -43,11 +43,11 @@ function queryActivities (){
          xhr.open('GET', 'https://api.thecatapi.com/v1/images/search');
          xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE) {
-           console.log("responseText:", xhr.responseText);
     				response = JSON.parse(xhr.responseText);
+            console.log("response:" + response);
             catUrl = response[0].url;
-            catImg = catUrl.src;
-             console.log(catUrl, catImg);
+           // catImg = catUrl.src;
+             console.log("catUrl:" catUrl);
            
             listNumber = listNumber + 1;
             $('.section-inverse').append($('<div>', {
@@ -56,7 +56,7 @@ function queryActivities (){
                 text: listNumber + ". "
               }));
        
-         console.log(`Sorry, the previous version stopped working. This page was updated 11/9/2025.`);
+         console.log(`The previous free API no longer exists so this page is not working as designed. This page was updated 11/9/2025.`);
         
 
             return;
