@@ -55,6 +55,16 @@ function queryActivities (){
                 style: "padding: 7px 1px 7px 17px; cursor:pointer;font-weight:300;",
                 text: listNumber + ". "
               }));
+              $('.suggestion-class').append($('<img>', {
+               id:"catImage",
+               src="",
+               alt="Random cat",
+               style="max-width: 400px; display: none;"
+              }));
+
+              const catImg = document.getElementById('catImage');
+              catImg.src = catUrl;
+              catImg.style.display = 'block';
        
          console.log(`The previous free API no longer exists so this page is not working as designed. This page was updated 11/9/2025.`);
         
