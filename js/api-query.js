@@ -65,7 +65,7 @@ function queryActivities() {
           );
 
           console.log(
-            "New cat image added and page scrolled to bottom. Updated 11/9/2025."
+            "New cat image added and page scrolled to bottom. Updated 11/9/2025.  The original activities API is no longer free so now you just get pictures of cats below the SUBMIT button. Enjoy."
           );
         }
       };
