@@ -51,12 +51,12 @@ function queryActivities (){
               const imageUrl = data[0].url;
             console.log(`Here's a random cat image: ${imageUrl}`);
               });
-        //    listNumber = listNumber + 1;
-        //    $('.section-inverse').append($('<div>', {
-        //       class: "suggestion-class prepend",
-        //        style: "padding: 7px 1px 7px 17px; cursor:pointer;font-weight:300",
-        //        text: listNumber + ". " + activity
-        //      }));
+            listNumber = listNumber + 1;
+            $('.section-inverse').append($('<div>', {
+               class: "suggestion-class prepend",
+                style: "padding: 7px 1px 7px 17px; cursor:pointer;font-weight:300",
+                text: listNumber + "Here's a random cat image: " + imageUrl
+              }));
        
          console.log(`Sorry, the previous version stopped working. This page was updated 11/9/2025.`);
         //});
